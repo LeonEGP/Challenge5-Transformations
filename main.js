@@ -51,6 +51,17 @@ function myScaling(x, y, factor) {
   return [newX , newY];
 }
 
+//Función de Escalado dados dos factores.
+function myScaling(x, y, factorX, factorY) {
+  let pivX = width/2;
+  let pivY = height/2;
+  let dx = x - pivX
+  let dy = y - pivY;
+  let newX = pivX + factorX*dx;
+  let newY = pivY + factorY*dy;
+  return [newX , newY];
+}
+
 //Función de Escalado dado un factor, y dos pivotes.
 function myScalingPiv(x, y, factor, pivX, pivY) {
   let dx = x - pivX
@@ -152,6 +163,10 @@ function draw() {
   //Prueba de Scaling
   //fill(1);
   //polygon(width/2, height/2, 100, 5, myScaling,2);
+  
+  //Prueba de Scaling con dos Factores
+  //fill(1);
+  //polygon(width/2, height/2, 100, 5, myScaling,2,2);
   
   //Prueba de ScalingPiv
   //fill(1);
